@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Flores-content{
+
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin-top: 100px;
+}
+.Flores{
+    color: #F51841;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.Conteiner-productos{
+    
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        min-height:90vh;
+        justify-content: center;
+        align-items: center;
+        margin: 1px 100px 30PX 100px;
+        
+    }
+    .card {
+        
+        background-color: white;
+        box-shadow: 0 0 5px black;
+        overflow: hidden;
+        width: 230px;
+        margin-bottom: 0px;
+        text-align: center;
+        align-items: center;
+    }
+    h2{
+        font-size: 80px;
+    }
+    .img1{
+
+        width: 250px;
+        height: 250px;
+    }
+
+    
+    .preciocard{
+        display: flex;
+        font-size: 15px;
+    }
+    .btncar{
+        padding: 5px;
+        border-style: none;
+        border-radius: 5px;
+        width: 100px;
+        margin: 0 5px 0 50px;
+        margin-bottom: 5px;
+        background-color: #F51841;
+        cursor: pointer;
+        color: white;
+    }
+    .btncar:hover{
+        background-color: white;
+        border:solid 2px #F51841;
+        color: black; 
+    }
+     p{
+        margin-left: 10px;
+        font-weight: bold;
+    }
+
+
+    
+@media (max-width: 768px) {
+    .Conteiner-productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10px;
+        margin: 0 0 20px 0;
+        padding: 0 10px; /* Añadir algo de espacio lateral para no estar pegado al borde */
+    }
+
+    .card {
+        flex-basis: 48%; /* Ajustamos para que las tarjetas ocupen casi todo el ancho */
+        margin: 10px 0; /* Reducimos el margen vertical */
+    }
+
+    .img1 {
+        width: 100%; /* Asegura que la imagen ocupe todo el ancho de la tarjeta */
+        height: 200px; /* Ajusta la altura de la imagen */
+        object-fit: cover; /* Mantiene la proporción de la imagen */
+    }
+
+    .preciocard {
+        flex-direction: column; /* Apila el precio y el botón en dispositivos pequeños */
+        justify-content: center;
+        align-items: center;
+        padding: 10px; /* Asegura que haya espacio alrededor */
+    }
+
+    .btncar {
+        width: 80%; /* Ajusta el botón para que no se vea tan pequeño */
+        margin: 5px 0; /* Espacio entre el botón y el precio */
+    }
+
+    .card h2 {
+        font-size: 16px; /* Ajusta el tamaño del título para la vista móvil */
+        margin: 10px 0; /* Espacio entre el título y la imagen */
+    }
+
+    .card p {
+        font-size: 14px; /* Ajusta el tamaño del precio */
+    }
+}
+@media (max-width:480px) {
+    
+
+.Flores-content{
+    font-size: 30px;
+   }
+    .card {
+        flex-basis: 100%; /* En pantallas más pequeñas, cada tarjeta ocupa el 100% */
+    }
+
+    .img1 {
+        height: 180px; /* Ajusta un poco más la altura de la imagen en pantallas muy pequeñas */
+    }
+
+    .preciocard {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Asegura que el contenido se ajuste */
+    }
+
+    .btncar {
+        width: 90%; /* Ajusta el tamaño del botón para que se vea bien */
+    }
+
+    .card h2 {
+        font-size: 14px; /* Ajusta el tamaño del título para pantallas pequeñas */
+    }
+
+    .card p {
+        font-size: 12px; /* Ajusta el tamaño del precio */
+    }
+    .Conteiner-productos {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+       
+    }
+    .card {
+        width: 100%;
+        margin: 0;
+    }
+    .img1 {
+        width: 100%;
+        height: auto;
+    }
+}

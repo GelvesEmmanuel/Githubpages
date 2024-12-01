@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+/* Header General */
+.header {
+    top: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+    background-color: #f4f4f4;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 5px black;
+
+}
+
+/* Estilo Barra de Búsqueda */
+.search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    width: 200px
+}
+
+.search input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.search i {
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+}
+
+/* Menú de Navegación */
+.navbar {
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.navbar ul li {
+    list-style: none;
+    
+}
+
+.naviten {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.naviten:hover {
+    color: #F51841;
+    font-weight: bold;
+}
+
+.icon {
+    color: #F51841;
+    font-weight: bold;
+    font-size: 23px;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: black;
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Vista para dispositivos pequeños */
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        
+        right: 0;
+        width: 250px;
+        background-color: #f4f4f4;
+        border-top: 1px solid #ddd;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: flex-start;
+       
+        
+    }
+
+    .navbar ul li {
+        width: 100%; /* Hacer que cada elemento ocupe todo el ancho */
+        padding: 1rem; /* Ajusta el padding a tu gusto */
+        text-align: center; 
+       border:solid 2px #F51841;
+       
+    }
+
+    .search {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .search input {
+        width: 80%;
+    }
+}
